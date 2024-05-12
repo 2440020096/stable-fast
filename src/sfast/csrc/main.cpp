@@ -15,10 +15,10 @@ PYBIND11_MODULE(TORCH_EXTENSION_NAME, m) {
   misc::initMiscBindings(m);
 }
 
-// TORCH_LIBRARY(sfast, m) {
-//   operators::initCUDNNConvolutionBindings(m);
-//   operators::initCUBLASGEMMBindings(m);
-//   operators::initCutlassQLinearBindings(m);
-//   operators::initCutlassDualLinearBindings(m);
-//   operators::initFusedLinearBindings(m);
-// }
+TORCH_LIBRARY(sfast, m) {
+  // operators::initCUDNNConvolutionBindings(m);
+  // operators::initCUBLASGEMMBindings(m);
+  // operators::initCutlassQLinearBindings(m);
+  // operators::initCutlassDualLinearBindings(m);
+  operators::initFusedLinearBindings(m);
+}
